@@ -1,80 +1,655 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portifolio</title>
+
+    <title>Portfólio - Projeto Integrador</title>
+
+    <style>
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Área principal */
+        main {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Títulos */
+        h1 {
+            color: #1565c0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #1976d2;
+            margin-top: 45px;
+        }
+
+        h3 {
+            color: #2e7d32;
+            margin-top: 40px;
+        }
+
+        h4 {
+            color: #ef6c00;
+            margin-top: 40px;
+        }
+
+        h5 {
+            color: #6a1b9a;
+            font-size: 24px;
+            margin-top: 40px;
+        }
+
+        /* Parágrafos */
+        p {
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+
+        /* =========================
+           BOTÕES DE ACESSIBILIDADE
+        ========================== */
+
+        .acessibilidade {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            padding: 15px;
+            background-color: #1565c0;
+        }
+
+        .acessibilidade button {
+            border: none;
+            border-radius: 8px;
+            padding: 10px 15px;
+
+            background-color: white;
+            color: #1565c0;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .acessibilidade button:hover {
+            background-color: #e3f2fd;
+            transform: scale(1.03);
+        }
+
+        .acessibilidade button:focus {
+            outline: 3px solid #ffeb3b;
+            outline-offset: 2px;
+        }
+
+        /* =========================
+           MODO ESCURO
+        ========================== */
+
+        body.modo-escuro {
+            background-color: #121212;
+            color: #eeeeee;
+        }
+
+        body.modo-escuro main {
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+        }
+
+        body.modo-escuro h1 {
+            color: #64b5f6;
+        }
+
+        body.modo-escuro h2 {
+            color: #64b5f6;
+        }
+
+        body.modo-escuro h3 {
+            color: #81c784;
+        }
+
+        body.modo-escuro h4 {
+            color: #ffb74d;
+        }
+
+        body.modo-escuro h5 {
+            color: #ce93d8;
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================== */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+
+        body.modo-escuro footer {
+            color: #aaa;
+        }
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            body {
+                font-size: 17px;
+            }
+
+            main {
+                margin: 20px 10px;
+                padding: 20px;
+            }
+
+            .acessibilidade {
+                padding: 10px;
+            }
+
+            .acessibilidade button {
+                font-size: 14px;
+                padding: 8px 10px;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Biografia</h1>
-    <p>🚀 Nossa Turma: Uma Jornada de Desafios e Descobertas
 
-Nossa turma embarcou em um desafio diferente: transformar conhecimento em criatividade e tecnologia por meio de uma página na web.
-Durante o Projeto Integrador, tivemos a oportunidade de sair da teoria e colocar nossas ideias em prática. Trabalhamos juntos, enfrentamos desafios e aprendemos a importância da colaboração, da comunicação e da criatividade para construir algo de que pudéssemos nos orgulhar.
-Ao longo dessa jornada, unimos conhecimentos de Robótica, Física, Tecnociência e Programação, percebendo como diferentes áreas podem se conectar para criar um único projeto. Cada atividade trouxe uma nova experiência e nos ajudou a desenvolver novas habilidades.
-💻 Nosso desafio foi criar uma página na web que representasse nossa trajetória, reunindo os trabalhos realizados, os conhecimentos adquiridos e os momentos que marcaram esse período.
-Nem tudo foi fácil. Tivemos erros, dúvidas e dificuldades pelo caminho, mas cada obstáculo se tornou uma oportunidade para aprender e melhorar. Afinal, fazer um projeto também significa aprender com as tentativas e continuar avançando.
-Hoje, este site representa muito mais do que um trabalho escolar. Ele é o resultado de dedicação, criatividade, trabalho em equipe e aprendizado.
-✨ Essa é a nossa história. Esse é o nosso projeto. E essa foi a nossa jornada
-    </p>
+    <!-- =========================
+         BOTÕES DE ACESSIBILIDADE
+    ========================== -->
 
-    <h2>Projeto Integrador</h2>
-    <p>Neste site, convidamos você a acompanhar de perto a nossa jornada durante o 2º trimestre do Projeto Integrador! 🚀
-Ao longo desse período, unimos conhecimentos de Robótica, Física, Tecnociência e Programação em uma experiência multidisciplinar, na qual cada disciplina contribuiu de uma forma diferente para transformar nossas ideias em projetos e soluções.
-🤖 Robótica • ⚡ Física • 🔬 Tecnociência • 💻 Programação
-Aqui, você poderá conhecer não apenas o nosso produto final — este site —, mas também todos os trabalhos, atividades, experimentos e aprendizados que fizeram parte dessa trajetória.
-Mais do que mostrar resultados, queremos compartilhar como tudo foi construído, os desafios que enfrentamos, as descobertas que fizemos e tudo o que aprendemos durante as aulas.
-✨ Explore o site, conheça nossos projetos e venha fazer parte dessa jornada!</p>
+    <nav class="acessibilidade" aria-label="Ferramentas de acessibilidade">
 
-<h3>robotica</h3>
-   <p>🤖 Robótica: Transformando Ideias em Projetos
+        <button onclick="modoEscuro()" aria-label="Ativar ou desativar modo escuro">
+            🌙 Modo escuro
+        </button>
 
-Durante as aulas de Robótica, nossa turma teve a oportunidade de aprender na prática, criando diferentes protótipos e experimentos que nos ajudaram a entender como a tecnologia funciona no mundo real.
+        <button onclick="aumentarFonte()" aria-label="Aumentar tamanho da fonte">
+            🔎 Aumentar texto
+        </button>
 
-Ao longo do projeto, desenvolvemos atividades que envolveram eletrônica, programação, sensores, LEDs e automação. Cada experimento trouxe um novo desafio e nos permitiu colocar em prática os conhecimentos adquiridos em sala.
+        <button onclick="diminuirFonte()" aria-label="Diminuir tamanho da fonte">
+            🔍 Diminuir texto
+        </button>
 
-💡 Nossos projetos
+        <button onclick="lerPagina()" aria-label="Ler o conteúdo da página em voz alta">
+            🔊 Ler página
+        </button>
 
-🌈 Disco de Newton
-Construímos um experimento para observar a composição das cores e compreender, de forma prática, como diferentes cores podem formar a luz branca.
+        <button onclick="pararLeitura()" aria-label="Parar leitura da página">
+            ⏹️ Parar leitura
+        </button>
 
-💡 LED Fade-In e Fade-Out
-Aprendemos a controlar a intensidade de um LED, fazendo com que ele acendesse e apagasse gradualmente. Essa atividade ajudou a entender melhor o controle de sinais e a programação.
+    </nav>
 
-🌈 LED RGB
-Utilizamos um LED RGB para trabalhar com diferentes combinações de cores, explorando como as cores vermelho, verde e azul podem ser misturadas para criar novas tonalidades.
 
-🚦 Semáforo de cruzamento para carros
-Criamos um protótipo de semáforo para representar o funcionamento de um cruzamento. O projeto ajudou a compreender conceitos de sequenciamento, automação e controle.
+    <main id="conteudo">
 
-👋 Sensor de presença
-Desenvolvemos um sistema capaz de identificar a presença de pessoas ou objetos, mostrando como sensores podem ser utilizados para automatizar diferentes tarefas.
+        <!-- =========================
+             BIOGRAFIA
+        ========================== -->
 
-🔥 Sensor de gás e fumaça
-Trabalhamos com sensores capazes de detectar alterações relacionadas à presença de gases e fumaça, conhecendo uma aplicação importante da tecnologia em segurança e prevenção.
+        <h1>Biografia</h1>
 
-🤖 Robô seguidor de linha
-Um dos projetos mais desafiadores foi a construção de um robô capaz de seguir uma linha utilizando sensores. Nesse projeto, colocamos em prática vários conhecimentos de programação, eletrônica e automação, fazendo o robô tomar decisões de acordo com o caminho.
+        <p>
+            🚀 Nossa Turma: Uma Jornada de Desafios e Descobertas
+        </p>
 
-🚀 Muito além de montar protótipos
+        <p>
+            Nossa turma embarcou em um desafio diferente: transformar
+            conhecimento em criatividade e tecnologia por meio de uma
+            página na web.
+        </p>
 
-Cada projeto foi uma oportunidade para experimentar, testar, errar, corrigir e aprender. A Robótica nos mostrou que transformar uma ideia em realidade exige criatividade, trabalho em equipe e muita persistência.
+        <p>
+            Durante o Projeto Integrador, tivemos a oportunidade de sair
+            da teoria e colocar nossas ideias em prática.
+        </p>
 
-No final, percebemos que cada pequeno circuito e cada linha de código faz parte de algo maior: aprender fazendo e transformar conhecimento em tecnologia.</p> 
-<h4>fisica e tecnociencia</h4>
-<h5>programação</h5>
-<p>💻 Programação: Transformando Código em um Site
+        <p>
+            Trabalhamos juntos, enfrentamos desafios e aprendemos a
+            importância da colaboração, da comunicação e da criatividade
+            para construir algo de que pudéssemos nos orgulhar.
+        </p>
 
-Nas aulas de Programação, estamos aprendendo os primeiros passos para desenvolver páginas na web utilizando HTML, entendendo como funciona a estrutura de um site e como organizar seus conteúdos.
+        <p>
+            Ao longo dessa jornada, unimos conhecimentos de Robótica,
+            Física, Tecnociência e Programação, percebendo como diferentes
+            áreas podem se conectar para criar um único projeto.
+        </p>
 
-Durante as atividades, estamos colocando esse conhecimento em prática no Visual Studio Code (VS Code), criando títulos, textos, imagens, links e diferentes elementos para deixar nossa página mais organizada e atrativa.
+        <p>
+            Cada atividade trouxe uma nova experiência e nos ajudou a
+            desenvolver novas habilidades.
+        </p>
 
-Nosso principal desafio é transformar tudo o que aprendemos em um produto final: um site completo, desenvolvido pela nossa turma para apresentar na Feira de Ciências. 🔬💻
+        <p>
+            💻 Nosso desafio foi criar uma página na web que representasse
+            nossa trajetória, reunindo os trabalhos realizados, os
+            conhecimentos adquiridos e os momentos que marcaram esse período.
+        </p>
 
-Essa experiência está nos ajudando a desenvolver não apenas conhecimentos de programação, mas também criatividade, organização, trabalho em equipe e resolução de problemas.
+        <p>
+            Nem tudo foi fácil. Tivemos erros, dúvidas e dificuldades
+            pelo caminho, mas cada obstáculo se tornou uma oportunidade
+            para aprender e melhorar.
+        </p>
 
-🚀 Cada linha de código representa uma parte da nossa jornada e, juntas, elas formam o nosso projeto!</p>
+        <p>
+            Afinal, fazer um projeto também significa aprender com as
+            tentativas e continuar avançando.
+        </p>
 
+        <p>
+            Hoje, este site representa muito mais do que um trabalho escolar.
+            Ele é o resultado de dedicação, criatividade, trabalho em equipe
+            e aprendizado.
+        </p>
+
+        <p>
+            ✨ Essa é a nossa história. Esse é o nosso projeto.
+            E essa foi a nossa jornada.
+        </p>
+
+
+        <!-- =========================
+             PROJETO INTEGRADOR
+        ========================== -->
+
+        <h2>Projeto Integrador</h2>
+
+        <p>
+            Neste site, convidamos você a acompanhar de perto a nossa jornada
+            durante o 2º trimestre do Projeto Integrador! 🚀
+        </p>
+
+        <p>
+            Ao longo desse período, unimos conhecimentos de Robótica,
+            Física, Tecnociência e Programação em uma experiência
+            multidisciplinar.
+        </p>
+
+        <p>
+            Cada disciplina contribuiu de uma forma diferente para
+            transformar nossas ideias em projetos e soluções.
+        </p>
+
+        <p>
+            🤖 Robótica • ⚡ Física • 🔬 Tecnociência • 💻 Programação
+        </p>
+
+        <p>
+            Aqui, você poderá conhecer não apenas o nosso produto final —
+            este site —, mas também todos os trabalhos, atividades,
+            experimentos e aprendizados que fizeram parte dessa trajetória.
+        </p>
+
+        <p>
+            Mais do que mostrar resultados, queremos compartilhar como tudo
+            foi construído, os desafios que enfrentamos, as descobertas que
+            fizemos e tudo o que aprendemos durante as aulas.
+        </p>
+
+        <p>
+            ✨ Explore o site, conheça nossos projetos e venha fazer parte
+            dessa jornada!
+        </p>
+
+
+        <!-- =========================
+             ROBÓTICA
+        ========================== -->
+
+        <h3>🤖 Robótica</h3>
+
+        <p>
+            🤖 Robótica: Transformando Ideias em Projetos
+        </p>
+
+        <p>
+            Durante as aulas de Robótica, nossa turma teve a oportunidade
+            de aprender na prática, criando diferentes protótipos e
+            experimentos que nos ajudaram a entender como a tecnologia
+            funciona no mundo real.
+        </p>
+
+        <p>
+            Ao longo do projeto, desenvolvemos atividades que envolveram
+            eletrônica, programação, sensores, LEDs e automação.
+        </p>
+
+        <p>
+            Cada experimento trouxe um novo desafio e nos permitiu colocar
+            em prática os conhecimentos adquiridos em sala.
+        </p>
+
+        <p>
+            💡 Nossos projetos
+        </p>
+
+        <p>
+            🌈 <strong>Disco de Newton</strong>
+        </p>
+
+        <p>
+            Construímos um experimento para observar a composição das cores
+            e compreender, de forma prática, como diferentes cores podem
+            formar a luz branca.
+        </p>
+
+        <p>
+            💡 <strong>LED Fade-In e Fade-Out</strong>
+        </p>
+
+        <p>
+            Aprendemos a controlar a intensidade de um LED, fazendo com que
+            ele acendesse e apagasse gradualmente.
+        </p>
+
+        <p>
+            Essa atividade ajudou a entender melhor o controle de sinais
+            e a programação.
+        </p>
+
+        <p>
+            🌈 <strong>LED RGB</strong>
+        </p>
+
+        <p>
+            Utilizamos um LED RGB para trabalhar com diferentes combinações
+            de cores, explorando como as cores vermelho, verde e azul podem
+            ser misturadas para criar novas tonalidades.
+        </p>
+
+        <p>
+            🚦 <strong>Semáforo de cruzamento para carros</strong>
+        </p>
+
+        <p>
+            Criamos um protótipo de semáforo para representar o funcionamento
+            de um cruzamento.
+        </p>
+
+        <p>
+            O projeto ajudou a compreender conceitos de sequenciamento,
+            automação e controle.
+        </p>
+
+        <p>
+            👋 <strong>Sensor de presença</strong>
+        </p>
+
+        <p>
+            Desenvolvemos um sistema capaz de identificar a presença de
+            pessoas ou objetos.
+        </p>
+
+        <p>
+            O projeto mostrou como sensores podem ser utilizados para
+            automatizar diferentes tarefas.
+        </p>
+
+        <p>
+            🔥 <strong>Sensor de gás e fumaça</strong>
+        </p>
+
+        <p>
+            Trabalhamos com sensores capazes de detectar alterações
+            relacionadas à presença de gases e fumaça.
+        </p>
+
+        <p>
+            Com essa atividade, conhecemos uma aplicação importante da
+            tecnologia em segurança e prevenção.
+        </p>
+
+        <p>
+            🤖 <strong>Robô seguidor de linha</strong>
+        </p>
+
+        <p>
+            Um dos projetos mais desafiadores foi a construção de um robô
+            capaz de seguir uma linha utilizando sensores.
+        </p>
+
+        <p>
+            Nesse projeto, colocamos em prática vários conhecimentos de
+            programação, eletrônica e automação.
+        </p>
+
+        <p>
+            O robô precisava tomar decisões de acordo com o caminho,
+            tornando a atividade um grande desafio para a turma.
+        </p>
+
+        <p>
+            🚀 <strong>Muito além de montar protótipos</strong>
+        </p>
+
+        <p>
+            Cada projeto foi uma oportunidade para experimentar, testar,
+            errar, corrigir e aprender.
+        </p>
+
+        <p>
+            A Robótica nos mostrou que transformar uma ideia em realidade
+            exige criatividade, trabalho em equipe e muita persistência.
+        </p>
+
+        <p>
+            No final, percebemos que cada pequeno circuito e cada linha
+            de código faz parte de algo maior: aprender fazendo e
+            transformar conhecimento em tecnologia.
+        </p>
+
+
+        <!-- =========================
+             FÍSICA E TECNOCIÊNCIA
+        ========================== -->
+
+        <h4>⚡ Física e 🔬 Tecnociência</h4>
+
+        <p>
+            Nesta etapa do projeto, trabalhamos conhecimentos relacionados
+            à Física e à Tecnociência, relacionando conceitos estudados
+            em sala com as atividades práticas desenvolvidas pela turma.
+        </p>
+
+        <p>
+            Essas áreas contribuíram para compreender melhor os fenômenos
+            presentes nos experimentos e perceber como a ciência e a
+            tecnologia estão presentes no nosso cotidiano.
+        </p>
+
+
+        <!-- =========================
+             PROGRAMAÇÃO
+        ========================== -->
+
+        <h5>💻 Programação</h5>
+
+        <p>
+            💻 Programação: Transformando Código em um Site
+        </p>
+
+        <p>
+            Nas aulas de Programação, estamos aprendendo os primeiros
+            passos para desenvolver páginas na web utilizando HTML.
+        </p>
+
+        <p>
+            Estamos entendendo como funciona a estrutura de um site
+            e como organizar seus conteúdos.
+        </p>
+
+        <p>
+            Durante as atividades, estamos colocando esse conhecimento
+            em prática no Visual Studio Code (VS Code).
+        </p>
+
+        <p>
+            Criamos títulos, textos, imagens, links e diferentes elementos
+            para deixar nossa página mais organizada e atrativa.
+        </p>
+
+        <p>
+            Nosso principal desafio é transformar tudo o que aprendemos
+            em um produto final: um site completo, desenvolvido pela
+            nossa turma para apresentar na Feira de Ciências. 🔬💻
+        </p>
+
+        <p>
+            Essa experiência está nos ajudando a desenvolver não apenas
+            conhecimentos de programação, mas também criatividade,
+            organização, trabalho em equipe e resolução de problemas.
+        </p>
+
+        <p>
+            🚀 Cada linha de código representa uma parte da nossa jornada
+            e, juntas, elas formam o nosso projeto!
+        </p>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Projeto Integrador • Nossa Jornada de Aprendizado 🚀
+        </p>
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        // Tamanho padrão da fonte
+        let tamanhoFonte = 18;
+
+
+        // =========================
+        // MODO ESCURO
+        // =========================
+
+        function modoEscuro() {
+
+            document.body.classList.toggle("modo-escuro");
+
+        }
+
+
+        // =========================
+        // AUMENTAR FONTE
+        // =========================
+
+        function aumentarFonte() {
+
+            if (tamanhoFonte < 28) {
+
+                tamanhoFonte += 2;
+
+                document.body.style.fontSize = tamanhoFonte + "px";
+
+            }
+
+        }
+
+
+        // =========================
+        // DIMINUIR FONTE
+        // =========================
+
+        function diminuirFonte() {
+
+            if (tamanhoFonte > 14) {
+
+                tamanhoFonte -= 2;
+
+                document.body.style.fontSize = tamanhoFonte + "px";
+
+            }
+
+        }
+
+
+        // =========================
+        // LEITURA DA PÁGINA
+        // =========================
+
+        function lerPagina() {
+
+            // Para uma leitura anterior
+            speechSynthesis.cancel();
+
+            // Pega somente o conteúdo principal
+            const texto = document.getElementById("conteudo").innerText;
+
+            const leitura = new SpeechSynthesisUtterance(texto);
+
+            leitura.lang = "pt-BR";
+            leitura.rate = 0.9;
+            leitura.pitch = 1;
+
+            speechSynthesis.speak(leitura);
+
+        }
+
+
+        // =========================
+        // PARAR LEITURA
+        // =========================
+
+        function pararLeitura() {
+
+            speechSynthesis.cancel();
+
+        }
+
+    </script>
 
 </body>
+
 </html>
