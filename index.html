@@ -8,9 +8,6 @@
     <title>Portfólio - Projeto Integrador</title>
 
     <style>
-        /* =========================
-           CONFIGURAÇÕES GERAIS
-        ========================== */
 
         * {
             box-sizing: border-box;
@@ -27,7 +24,6 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Área principal */
         main {
             max-width: 850px;
             margin: 40px auto;
@@ -37,7 +33,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
-        /* Títulos */
         h1 {
             color: #1565c0;
             text-align: center;
@@ -65,15 +60,37 @@
             margin-top: 40px;
         }
 
-        /* Parágrafos */
         p {
             margin-bottom: 22px;
             text-align: justify;
         }
 
-        /* =========================
-           BOTÕES DE ACESSIBILIDADE
-        ========================== */
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 25px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            margin: 25px auto;
+            border-radius: 12px;
+            background-color: #000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .legenda {
+            text-align: center;
+            color: #666;
+            font-size: 15px;
+            margin-top: -10px;
+        }
 
         .acessibilidade {
             position: sticky;
@@ -114,10 +131,6 @@
             outline-offset: 2px;
         }
 
-        /* =========================
-           MODO ESCURO
-        ========================== */
-
         body.modo-escuro {
             background-color: #121212;
             color: #eeeeee;
@@ -148,9 +161,9 @@
             color: #ce93d8;
         }
 
-        /* =========================
-           RODAPÉ
-        ========================== */
+        body.modo-escuro .legenda {
+            color: #aaa;
+        }
 
         footer {
             text-align: center;
@@ -161,10 +174,6 @@
         body.modo-escuro footer {
             color: #aaa;
         }
-
-        /* =========================
-           RESPONSIVIDADE
-        ========================== */
 
         @media (max-width: 600px) {
 
@@ -189,15 +198,18 @@
             p {
                 text-align: left;
             }
+
+            img,
+            video {
+                margin: 20px auto;
+                border-radius: 8px;
+            }
         }
+
     </style>
 </head>
 
 <body>
-
-    <!-- =========================
-         BOTÕES DE ACESSIBILIDADE
-    ========================== -->
 
     <nav class="acessibilidade" aria-label="Ferramentas de acessibilidade">
 
@@ -223,19 +235,22 @@
 
     </nav>
 
-
     <main id="conteudo">
-
-        <!-- =========================
-             BIOGRAFIA
-        ========================== -->
 
         <h1>Biografia</h1>
 
         <p>
             🚀 Nossa Turma: Uma Jornada de Desafios e Descobertas
         </p>
-        <img src="WhatsApp Image 2026-09-10 at 07.51.25.jpeg" alt="foto da turma">
+
+        <img
+            src="WhatsApp Image 2026-09-10 at 07.51.25.jpeg"
+            alt="Foto da turma durante o Projeto Integrador"
+        >
+
+        <p class="legenda">
+            📸 Foto da nossa turma durante o Projeto Integrador.
+        </p>
 
         <p>
             Nossa turma embarcou em um desafio diferente: transformar
@@ -293,10 +308,22 @@
             E essa foi a nossa jornada.
         </p>
 
+        <h3>🎥 Nossa Jornada em Vídeo</h3>
 
-        <!-- =========================
-             PROJETO INTEGRADOR
-        ========================== -->
+        <p>
+            Confira alguns momentos da nossa turma durante o desenvolvimento
+            do Projeto Integrador.
+        </p>
+
+        <video controls>
+            <source src="video-turma.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+        </video>
+
+        <p class="legenda">
+            🎥 Vídeo mostrando momentos da nossa jornada.
+        </p>
+
 
         <h2>Projeto Integrador</h2>
 
@@ -338,14 +365,19 @@
         </p>
 
 
-        <!-- =========================
-             ROBÓTICA
-        ========================== -->
-
         <h3>🤖 Robótica</h3>
 
         <p>
             🤖 Robótica: Transformando Ideias em Projetos
+        </p>
+
+        <img
+            src="robotica.jpg"
+            alt="Projeto de Robótica desenvolvido pela turma"
+        >
+
+        <p class="legenda">
+            🤖 Registro de uma atividade de Robótica realizada pela turma.
         </p>
 
         <p>
@@ -369,9 +401,15 @@
             💡 Nossos projetos
         </p>
 
+
         <p>
             🌈 <strong>Disco de Newton</strong>
         </p>
+
+        <img
+            src="disco-newton.jpg"
+            alt="Experimento do Disco de Newton"
+        >
 
         <p>
             Construímos um experimento para observar a composição das cores
@@ -379,9 +417,15 @@
             formar a luz branca.
         </p>
 
+
         <p>
             💡 <strong>LED Fade-In e Fade-Out</strong>
         </p>
+
+        <img
+            src="led-fade.jpg"
+            alt="Projeto de LED Fade-In e Fade-Out"
+        >
 
         <p>
             Aprendemos a controlar a intensidade de um LED, fazendo com que
@@ -393,9 +437,15 @@
             e a programação.
         </p>
 
+
         <p>
             🌈 <strong>LED RGB</strong>
         </p>
+
+        <img
+            src="led-rgb.jpg"
+            alt="Projeto utilizando LED RGB"
+        >
 
         <p>
             Utilizamos um LED RGB para trabalhar com diferentes combinações
@@ -403,9 +453,15 @@
             ser misturadas para criar novas tonalidades.
         </p>
 
+
         <p>
             🚦 <strong>Semáforo de cruzamento para carros</strong>
         </p>
+
+        <img
+            src="semaforo.jpg"
+            alt="Protótipo de semáforo para cruzamento"
+        >
 
         <p>
             Criamos um protótipo de semáforo para representar o funcionamento
@@ -417,9 +473,15 @@
             automação e controle.
         </p>
 
+
         <p>
             👋 <strong>Sensor de presença</strong>
         </p>
+
+        <img
+            src="sensor-presenca.jpg"
+            alt="Projeto de sensor de presença"
+        >
 
         <p>
             Desenvolvemos um sistema capaz de identificar a presença de
@@ -431,9 +493,15 @@
             automatizar diferentes tarefas.
         </p>
 
+
         <p>
             🔥 <strong>Sensor de gás e fumaça</strong>
         </p>
+
+        <img
+            src="sensor-gas.jpg"
+            alt="Projeto de sensor de gás e fumaça"
+        >
 
         <p>
             Trabalhamos com sensores capazes de detectar alterações
@@ -445,9 +513,15 @@
             tecnologia em segurança e prevenção.
         </p>
 
+
         <p>
             🤖 <strong>Robô seguidor de linha</strong>
         </p>
+
+        <img
+            src="robo-seguidor.jpg"
+            alt="Robô seguidor de linha construído pela turma"
+        >
 
         <p>
             Um dos projetos mais desafiadores foi a construção de um robô
@@ -463,6 +537,24 @@
             O robô precisava tomar decisões de acordo com o caminho,
             tornando a atividade um grande desafio para a turma.
         </p>
+
+
+        <h4>🎥 Robótica na Prática</h4>
+
+        <p>
+            Confira no vídeo um pouco do desenvolvimento e funcionamento
+            dos projetos realizados durante as aulas de Robótica.
+        </p>
+
+        <video controls>
+            <source src="robotica.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+        </video>
+
+        <p class="legenda">
+            🎥 Demonstração dos projetos de Robótica.
+        </p>
+
 
         <p>
             🚀 <strong>Muito além de montar protótipos</strong>
@@ -485,10 +577,6 @@
         </p>
 
 
-        <!-- =========================
-             FÍSICA E TECNOCIÊNCIA
-        ========================== -->
-
         <h4>⚡ Física e 🔬 Tecnociência</h4>
 
         <p>
@@ -503,10 +591,6 @@
             tecnologia estão presentes no nosso cotidiano.
         </p>
 
-
-        <!-- =========================
-             PROGRAMAÇÃO
-        ========================== -->
 
         <h5>💻 Programação</h5>
 
@@ -555,25 +639,18 @@
 
 
     <footer>
+
         <p>
             Projeto Integrador • Nossa Jornada de Aprendizado 🚀
         </p>
+
     </footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
     <script>
 
-        // Tamanho padrão da fonte
         let tamanhoFonte = 18;
 
-
-        // =========================
-        // MODO ESCURO
-        // =========================
 
         function modoEscuro() {
 
@@ -582,26 +659,19 @@
         }
 
 
-        // =========================
-        // AUMENTAR FONTE
-        // =========================
-
         function aumentarFonte() {
 
             if (tamanhoFonte < 28) {
 
                 tamanhoFonte += 2;
 
-                document.body.style.fontSize = tamanhoFonte + "px";
+                document.body.style.fontSize =
+                    tamanhoFonte + "px";
 
             }
 
         }
 
-
-        // =========================
-        // DIMINUIR FONTE
-        // =========================
 
         function diminuirFonte() {
 
@@ -609,26 +679,23 @@
 
                 tamanhoFonte -= 2;
 
-                document.body.style.fontSize = tamanhoFonte + "px";
+                document.body.style.fontSize =
+                    tamanhoFonte + "px";
 
             }
 
         }
 
 
-        // =========================
-        // LEITURA DA PÁGINA
-        // =========================
-
         function lerPagina() {
 
-            // Para uma leitura anterior
             speechSynthesis.cancel();
 
-            // Pega somente o conteúdo principal
-            const texto = document.getElementById("conteudo").innerText;
+            const texto =
+                document.getElementById("conteudo").innerText;
 
-            const leitura = new SpeechSynthesisUtterance(texto);
+            const leitura =
+                new SpeechSynthesisUtterance(texto);
 
             leitura.lang = "pt-BR";
             leitura.rate = 0.9;
@@ -638,10 +705,6 @@
 
         }
 
-
-        // =========================
-        // PARAR LEITURA
-        // =========================
 
         function pararLeitura() {
 
